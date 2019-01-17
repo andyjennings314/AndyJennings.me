@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="AJPortfolio">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andy Jennings Makes Websites</title>
+
+    <!--CSS and fancy stuff -->
+    <link href="css/andy.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+
+</head>
+<body>
+        <a class="ToggleMenuButton">
+            <span>|</span>
+        </a>
+
+    <header id="PageHeader">
+        <ul class="HeaderMenu">
+            <li><a ng-href="#/">Home</a></li>
+            <li><a ng-href="#/about">About Me</a></li>
+            <li><a ng-href="#/portfolio">My Work</a></li>
+            <li><a href="https://uk.linkedin.com/pub/andrew-jennings/4b/9b4/586"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/andyjennings314"><i class="fa fa-github"></i></a></li>
+            <li><a href="mailto:andrew_jennings@live.co.uk"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+    </header>
+
+    <div id="MainContent" ng-view></div>
+
+    <footer id="PageFooter">
+        <p>&copy; {{copyrightYear}} Andrew Jennings, 
+            <span class="exceptions" ng-click="ExcepHover = !ExcepHover">except where noted</span>
+        </p>
+        <div class="ExcepHover" ng-show="ExcepHover">
+            <div>
+                <p><strong>Libraries used:</strong></p>
+                <ul>
+                    <li><a href="http://www.angularjs.org">AngularJS</a></li>
+                    <li><a href="http://www.jquery.com">jQuery</a></li>
+                    <!--<li><a href="https://github.com/marcandre/detect_swipe">jquery.detectSwipe</a></li>-->
+                </ul>
+                <p><strong>APIs used:</strong></p>
+                <ul>
+                    <li><a href="http://openweathermap.org/">OpenWeatherMap</a></li>
+                    <li><a href="http://freegeoip.net/">freegeoip.net</a></li>
+                </ul>
+            </div>
+            <span></span>
+        </div>
+    </footer>
+
+    <!-- JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <!--<script src="js/angular-animate.js"></script>-->
+    <!--<script src="js/jquery.detect_swipe.js"></script>-->
+    <script src="js/andy.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/homeCtrl.js"></script>
+    <script src="js/aboutCtrl.js"></script>
+    <script src="js/portfolioCtrl.js"></script>
+    <script src="js/pairsCtrl.js"></script>
+    <script src="js/weatherCtrl.js"></script>
+
+</body>
+</html>
