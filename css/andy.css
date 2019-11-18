@@ -1,98 +1,88 @@
-﻿/*Basic setup*/
-
+@charset "UTF-8";
 html {
-	height: 100%;
-	/*min-height: 100%;*/
+  height: 100%;
+  /*min-height: 100%;*/
 }
 
-body
-{
-    margin:0;
-    position: relative;
-    background-color: #242446;
-    font-family: Verdana, Geneva, sans-serif;
-    width: 100%;
-    height: 100%;
-    transition: padding-top 2s;
-    color: #BFBFD8;
-    z-index: 2;
+body {
+  margin: 0;
+  position: relative;
+  background-color: #242446;
+  font-family: Verdana, Geneva, sans-serif;
+  width: 100%;
+  height: 100%;
+  transition: padding-top 2s;
+  color: #BFBFD8;
+  z-index: 2;
 }
 
 /*Header*/
-
 #PageHeader {
-	width: 100%;
-	margin: 0 auto;
-	transition: margin-bottom 2s;
-	position: fixed;
-	bottom: 100%;
-	background-color: #000045;      
-	background: linear-gradient(to bottom, #000062 0%,#000062 37%,#000045 100%);          
-	border-bottom: 1px solid #000045;
+  width: 100%;
+  margin: 0 auto;
+  transition: margin-bottom 2s;
+  position: fixed;
+  bottom: 100%;
+  background-color: #000045;
+  background: linear-gradient(to bottom, #000062 0%, #000062 37%, #000045 100%);
+  border-bottom: 1px solid #000045;
 }
 
 .active #PageHeader {
-    margin-bottom: -166px;
-
+  margin-bottom: -166px;
 }
 
 a.ToggleMenuButton {
-    float: left;
-
-    color: white;
-    background-color: #000045;
-    padding: 40px;
-    position: fixed;
-    top: -40px;
-    left: -40px;
-    border-radius: 80px;
-    text-decoration: none;
-    box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.5);
-    opacity: 1;
-    transition: all 1s;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    width: 15px;
-    height: 15px;
-    z-index: 55;
+  float: left;
+  color: white;
+  background-color: #000045;
+  padding: 40px;
+  position: fixed;
+  top: -40px;
+  left: -40px;
+  border-radius: 80px;
+  text-decoration: none;
+  box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: all 1s;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  width: 15px;
+  height: 15px;
+  z-index: 55;
 }
-
 a.ToggleMenuButton span {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
 }
-
+a.ToggleMenuButton span::before, a.ToggleMenuButton span::after {
+  content: "|";
+  display: inline-block;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  position: absolute;
+  top: 0px;
+  transition: all 1s;
+}
 a.ToggleMenuButton span::before {
-    content:"|";
-    display:inline-block;
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    position:absolute;
-    top: 0px;
-    left: -5px;
-    transition: all 1s;
+  left: -5px;
 }
-
 a.ToggleMenuButton span::after {
-    content:"|";
-    display:inline-block;
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    position:absolute;
-    top: 0px;
-    left: 5px;
-    transition: all 1s;
+  left: 5px;
 }
 
 ul.HeaderMenu {
   list-style: none;
-  padding: 0;  
+  padding: 0;
   margin: 10px 0 10px 75px;
+}
+ul.HeaderMenu li {
+  padding: 5px 0;
 }
 
 .active ul.HeaderMenu {
@@ -104,649 +94,554 @@ ul.HeaderMenu {
   -webkit-transform: rotate(0deg);
   width: 100%;
 }
-
-ul.HeaderMenu li {
-    /* height: 0; */
-    /* opacity: 0; */
-    /* transition: all 0.75s ease-out; */
-    padding: 5px 0;
-}
-
 .active ul.HeaderMenu li {
-    /* height: 19px; */
-    /* opacity: 1; */
-    /* transition: all 1.1s ease-in; */
+  /* height: 19px; */
+  /* opacity: 1; */
+  /* transition: all 1.1s ease-in; */
 }
 
 .active a.ToggleMenuButton span {
-    transform: rotate(180deg);
-    transition: transform 1s;
-    -webkit-transform: rotate(180deg);
-    -webkit-transition: transform 1s;
+  transform: rotate(180deg);
+  transition: transform 1s;
+  -webkit-transform: rotate(180deg);
+  -webkit-transition: transform 1s;
 }
-
 .active a.ToggleMenuButton span::before {
-	transform: rotate(0deg);
-	transition: transform 1s;
-	-webkit-transform: rotate(0deg);
-	-webkit-transition: transform 1s;
-	content: "^";
-	left: -3px;
+  transform: rotate(0deg);
+  transition: transform 1s;
+  -webkit-transform: rotate(0deg);
+  -webkit-transition: transform 1s;
+  content: "^";
+  left: -3px;
 }
-
 .active a.ToggleMenuButton span::after {
-	transform: rotate(0deg);
-	transition: transform 1s;
-	-webkit-transform: rotate(0deg);
-	-webkit-transition: transform 1s;
-	content: none;
+  transform: rotate(0deg);
+  transition: transform 1s;
+  -webkit-transform: rotate(0deg);
+  -webkit-transition: transform 1s;
+  content: none;
 }
 
 @media (min-width: 768px) {
+  #MainContent .homepage {
+    margin-top: 100px;
+  }
 
-#MainContent .homepage {
-    margin-top:100px;
-}
-
-#PageHeader, .active #PageHeader {
+  #PageHeader, .active #PageHeader {
     padding-left: 75px;
     height: 49px;
     margin-bottom: -49px;
-}
+  }
 
-ul.HeaderMenu, .active ul.HeaderMenu {
-	height: 49px;
-	margin: 0!important;
-}
-
-	ul.HeaderMenu, .active ul.HeaderMenu {
+  ul.HeaderMenu,  .active ul.HeaderMenu {
+    height: 49px;
+    margin: 0 !important;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
+  }
+  ul.HeaderMenu li,  .active ul.HeaderMenu li {
+    display: inline-block;
+    height: auto;
+    opacity: 1;
+    padding: 15px 10px;
+    float: left;
+    /* position: relative; */
+  }
 
-}
-    ul.HeaderMenu li, .active ul.HeaderMenu li {
-        display: inline-block;
-        height:auto;
-        opacity: 1;
-        padding: 15px 10px;
-    
-        float: left;
-        /* position: relative; */
-}
-	
- a.ToggleMenuButton {top: -90px;left: -90px;}
-
-.active a.ToggleMenuButton span {
-    font-size:14px;
+  a.ToggleMenuButton {
+    top: -90px;
+    left: -90px;
+  }
+  a.ToggleMenuButton span {
+    font-size: 14px;
     transform: rotate(360deg);
     transition: transform 1s;
     -webkit-transform: rotate(360deg);
     -webkit-transition: transform 1s;
-}
-
-.active a.ToggleMenuButton span::before {
-    content:"|";
+  }
+  a.ToggleMenuButton span::before, a.ToggleMenuButton span::after {
+    content: "|";
+    font-size: 10px;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+  }
+  a.ToggleMenuButton span::before {
     transform: rotate(-405deg);
     -webkit-transform: rotate(-405deg);
-    font-size: 10px;
     top: 7px;
     left: -4px;
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
-}
-
-.active a.ToggleMenuButton span::after {
-    content:"|";
+  }
+  a.ToggleMenuButton span::after {
     transform: rotate(405deg);
     -webkit-transform: rotate(405deg);
-    font-size: 10px;
     top: 8px;
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
     left: 5px;
+  }
 }
-
-
-
-	
-}
-
 ul.HeaderMenu li a {
-    transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
-    transition: all 0.75s;
-    color: #CCCCE0;
-    text-decoration: none;
-    font-weight: bold;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transition: all 0.75s;
+  color: #CCCCE0;
+  text-decoration: none;
+  font-weight: bold;
 }
-
 ul.HeaderMenu li a:hover {
-    transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    transition: all 1.5s;
-
-    color: white;
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  transition: all 1.5s;
+  color: white;
 }
-
-
 ul.HeaderMenu li a:before {
-    content:none;
-}
-
-ul.HeaderMenu li a:hover:before {
-    
+  content: none;
 }
 
 /* Portfolio Code */
-
 #FolioMain .FolioPod {
-    border-radius: 5px;
-    background-color: #BFBFD8;
-    padding: 10px;
-    margin-bottom: 20px;
-    position: relative;
+  border-radius: 5px;
+  background-color: #BFBFD8;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
 }
-
 #FolioMain .FolioPod h2 {
-    margin-top: 0;
-    text-align: center;
-    font-size: 32px;
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
 }
-
-#FolioMain .FolioPod .FolioImgs {
-
-}
-
 #FolioMain .FolioPod img {
-    max-width: 100%;
-    opacity: 0;
-    transition: opacity 1s;
+  max-width: 100%;
+  opacity: 0;
+  transition: opacity 1s;
 }
-
 #FolioMain .FolioPod img.active {
-    max-width: 100%;
-    opacity: 1;
-    transition: opacity 2s;
-    transition: all 0.5s ease-in, opacity 1s;
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity 2s;
+  transition: all 0.5s ease-in, opacity 1s;
 }
-
 #FolioMain .FolioPod .FolioText {
-    color: #131354;
+  color: #131354;
 }
-
 #FolioMain .FolioPod p {
-    text-align: center;
+  text-align: center;
 }
-
 #FolioMain .FolioPod a {
-    color: #000045;
-    text-decoration: none;
+  color: #000045;
+  text-decoration: none;
 }
-
 #FolioMain .FolioPod a:hover {
-    color:#30306A;
-}
-
-#FolioMain.swipe {
-    position: relative;
-    -webkit-transition: right 0.5s ease-in-out;
-    transition: right 0.5s ease-in-out;
-    right: 0;
-}
-
-#FolioMain.swipe .FolioPod {
-    float: left;
-    margin-right:10px;
+  color: #30306A;
 }
 
 @media (min-width: 768px) {
-    #FolioMain .FolioPod {
-        
-    }
+  #FolioMain .FolioPod img {
+    transition: all 0.5s ease-in;
+    transform: rotateX(0deg);
+  }
 
-    #FolioMain .FolioPod img {
-        transition: all 0.5s ease-in;
-        transform: rotateX(0deg);
-    }
-    #FolioMain .FolioPod:hover img {
-        transform: rotateX(360deg);
-        opacity: 0.2;
-        transition: all 1s ease-out, opacity 1s;
-    }
+  #FolioMain .FolioPod:hover img {
+    transform: rotateX(360deg);
+    opacity: 0.2;
+    transition: all 1s ease-out, opacity 1s;
+  }
 
+  #FolioMain .FolioPod p {
+    margin: 0;
+  }
 
-    #FolioMain .FolioPod p {
-        margin: 0;    
-    }
-
-    #FolioMain .FolioPod .FolioText {
-        opacity: 0;
-        position:absolute;
-        transition: all 1s;
-        top: 76px;
-        width: 640px;
-        height: 327px;
-        padding: 10px;
-     }
-
-    #FolioMain .FolioPod:hover .FolioText {
-        opacity: 1;
-     }
-}
-
-@media (min-width: 1150px) {
-    #FolioMain .FolioPod {
-        margin: 5px;
-        float: left;
-        width: 510px;
-    }
-
-    #FolioMain .FolioPod .FolioText {
-        width: 490px;
-        height: 258px;
-    }
-}
-
-/* About Page */
-
-.AboutFrame {
-    overflow:hidden;
-    position: relative;
-    top: -280px;
-    height: 650px;
-    transform-origin: 50% 100%;
-    transform: perspective(450px) rotateX(25deg);
-    -webkit-transform-origin: 50% 100%;
-    -webkit-transform: perspective(450px) rotateX(25deg);
+  #FolioMain .FolioPod .FolioText {
+    opacity: 0;
+    position: absolute;
     transition: all 1s;
-    -webkit-transition: all 1s;
+    top: 76px;
+    width: 640px;
+    height: 327px;
+    padding: 10px;
+  }
+
+  #FolioMain .FolioPod:hover .FolioText {
+    opacity: 1;
+  }
+}
+@media (min-width: 1150px) {
+  #FolioMain .FolioPod {
+    margin: 5px;
+    float: left;
+    width: 510px;
+  }
+
+  #FolioMain .FolioPod .FolioText {
+    width: 490px;
+    height: 258px;
+  }
+}
+/* About Page */
+.AboutFrame {
+  overflow: hidden;
+  position: relative;
+  top: -280px;
+  height: 650px;
+  transform-origin: 50% 100%;
+  transform: perspective(450px) rotateX(25deg);
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transform: perspective(450px) rotateX(25deg);
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
 
 .AboutInnerFrame {
-    margin: 0 auto;
-    transform-origin: 50% 100%;
-    text-align: justify;
-    font-size: 20px;
-    position: relative;
-    animation: AboutGlide 40s linear 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    -webkit-animation: AboutGlide 40s linear 1s;
-    -webkit-animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-    transition: all 1s;
-    -webkit-transition: all 1s;
+  margin: 0 auto;
+  transform-origin: 50% 100%;
+  text-align: justify;
+  font-size: 20px;
+  position: relative;
+  animation: AboutGlide 40s linear 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation: AboutGlide 40s linear 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
-
-.AboutFrame.OhAllRight {
-    transform: none;
-    -webkit-transform: none;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.4);
-    width: 100%;
-    height: 100%;
-    position: fixed;
+.AboutInnerFrame.OhAllRight {
+  transform: none;
+  -webkit-transform: none;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
-
-.AboutFrame.OhAllRight .AboutInnerFrame {
-    font-size: 14px;
-    padding: 5px 20px;
-    animation: none;
-    -webkit-animation: none;
-    width: 70%;
-    height: 60%;
-    margin: 120px auto 0;
-    border-radius: 10px;
-    background-color: rgba(255,255,255,0.15);
-    overflow-y: scroll;
+.AboutInnerFrame.OhAllRight .AboutInnerFrame {
+  font-size: 14px;
+  padding: 5px 20px;
+  animation: none;
+  -webkit-animation: none;
+  width: 70%;
+  height: 60%;
+  margin: 120px auto 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  overflow-y: scroll;
 }
-
 
 .SkipSW {
-    /*display: none;*/
-    cursor: pointer;
-    position: absolute;
-    width: 94%;
-    text-align: center;
-    bottom: 170px;
-    background-color: #000045;
-    background: linear-gradient(to bottom, #000062 0%,#000062 37%,#000045 100%);
-    padding: 10px;
-    border-radius: 10px;
+  /*display: none;*/
+  cursor: pointer;
+  position: absolute;
+  width: 94%;
+  text-align: center;
+  bottom: 170px;
+  background-color: #000045;
+  background: linear-gradient(to bottom, #000062 0%, #000062 37%, #000045 100%);
+  padding: 10px;
+  border-radius: 10px;
 }
-
 .SkipSW:active {
-    background-color: #000062;
-    background: linear-gradient(to bottom, #000045 0%,#000062 37%,#000062 100%);
+  background-color: #000062;
+  background: linear-gradient(to bottom, #000045 0%, #000062 37%, #000062 100%);
 }
 
 @media (min-width: 768px) {
-    .AboutFrame.OhAllRight .AboutInnerFrame {
-        overflow-y: auto;
-        height: auto;
-    }
+  .AboutFrame.OhAllRight .AboutInnerFrame {
+    overflow-y: auto;
+    height: auto;
+  }
 }
-
 @media (min-width: 1150px) {
-    .SkipSW {
-            top: 50px;
-            bottom: initial;
-            right: 15px;
-            width: initial;
-    }
+  .SkipSW {
+    top: 50px;
+    bottom: initial;
+    right: 15px;
+    width: initial;
+  }
 }
-
 @keyframes AboutGlide {
-	0% { top: 100%; }
-	100% { top: -100%; }
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100%;
+  }
 }
-
 @-webkit-keyframes AboutGlide {
-	0% { top: 100%; }
-	100% { top: -100%; }
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100%;
+  }
 }
-
 /*Pairs Game*/
-
 #pairsWindow {
-    width: 540px;
-    margin: 0 auto;
-    position: relative;
+  width: 540px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .pairsCard {
-    display: inline-block;
-    padding: 5px;
-    position: relative;
-    width: 125px;
-    height: 200px;  
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  width: 125px;
+  height: 200px;
 }
-
 .pairsCard .cardFront {
-    position:absolute;
-    /*opacity: 0;*/
-    transform: rotateY(-90deg);
-    transition: all 0.5s;
+  position: absolute;
+  /*opacity: 0;*/
+  transform: rotateY(-90deg);
+  transition: all 0.5s;
 }
-
 .pairsCard .cardBack {
-    position:absolute;
-    /*opacity: 1;*/
-    transition: all 1s;  
-    transition: all 0.5s;
-    transition-delay: 0.5s;
+  position: absolute;
+  /*opacity: 1;*/
+  transition: all 1s;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
 }
 
 .pairsCard.flipped .cardFront {
-    /*opacity: 1;*/
-    transform: rotateY(0deg);
-    transition: all 0.5s;
-    transition-delay: 0.5s;  
+  /*opacity: 1;*/
+  transform: rotateY(0deg);
+  transition: all 0.5s;
+  transition-delay: 0.5s;
 }
-
 .pairsCard.flipped .cardBack {
-    /*opacity: 0;*/
-    transform: rotateY(90deg);
-    transition: all 0.5s;  
+  /*opacity: 0;*/
+  transform: rotateY(90deg);
+  transition: all 0.5s;
 }
 
 .pairsModal {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
-    padding: 10px;
-    background-color: #242446; 
-        box-shadow: rgba(0,0,0,0.6) 5px 5px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  padding: 10px;
+  background-color: #242446;
+  box-shadow: rgba(0, 0, 0, 0.6) 5px 5px;
 }
-
 .pairsModal h2 {
-    margin:0;
+  margin: 0;
 }
-
-.pairsModal span.pairsReset {
-   background: linear-gradient(to bottom, #000062 0%,#000062 37%,#000045 100%);
-   border-radius: 5px;
-   padding: 2px 5px;
+.pairsModal .pairsReset {
+  background: linear-gradient(to bottom, #000062 0%, #000062 37%, #000045 100%);
+  border-radius: 5px;
+  padding: 2px 5px;
 }
 
 /*Weather widget*/
 .weatherMain {
-    text-align: center;
-    max-width: 500px;
-    margin: 15px auto 0;
-    padding: 20px;
-    border-radius: 15px;
-    border: 7px solid white;
-    transition: color 0.5s;
+  text-align: center;
+  max-width: 500px;
+  margin: 15px auto 0;
+  padding: 20px;
+  border-radius: 15px;
+  border: 7px solid white;
+  transition: color 0.5s;
 }
-
 .weatherMain.day {
-    background: linear-gradient(135deg, rgba(135,206,235,1) 0%,rgba(59,176,222,1) 100%);
-    color: black;
+  background: linear-gradient(135deg, skyblue 0%, #3bb0de 100%);
+  color: black;
 }
-
 .weatherMain.night {
-    background: linear-gradient(135deg, rgba(15,18,28,1) 0%,rgba(0,0,0,1) 80%);
-    color: white;
+  background: linear-gradient(135deg, #0f121c 0%, black 80%);
+  color: white;
 }
-
 .weatherMain.dusk {
-    background: linear-gradient(135deg, rgb(42, 173, 229) 0%,rgb(222, 145, 59) 100%);
-    color: black;
+  background: linear-gradient(135deg, #2aade5 0%, #de913b 100%);
+  color: black;
 }
-
-.weatherMain h3{
-    margin:0;
+.weatherMain h3 {
+  margin: 0;
 }
-
 .weatherMain .weatherIcon {
-    text-align: center;
+  text-align: center;
 }
-
-.weatherIcon h1 {
-    font-size: 150px;
-    line-height: 110px;
-    margin-bottom: 30px;
+.weatherMain .weatherIcon h1 {
+  font-size: 150px;
+  line-height: 110px;
+  margin-bottom: 30px;
 }
-
-.weatherIcon h2 {
-    font-size: 30px;
-    margin: 0;
+.weatherMain .weatherIcon h2 {
+  font-size: 30px;
+  margin: 0;
 }
-
 .weatherMain .weatherElement {
-    min-height: 50px;
+  min-height: 50px;
 }
-
 .weatherMain .weatherElement div {
-    width: 50%;
-    display: block;
-    float: left;
-    height: 50px;
+  width: 50%;
+  display: block;
+  float: left;
+  height: 50px;
 }
-
 .weatherMain .weatherElement h4.arrow {
-    display:inline-block;
-    font-size: 50px;
-    margin: 0;
-    line-height: 40px;
-    margin-top: 10px;
-    transition: transform 0.75s ease-in-out;
-    transition-delay: 0.1s;
+  display: inline-block;
+  font-size: 50px;
+  margin: 0;
+  line-height: 40px;
+  margin-top: 10px;
+  transition: transform 0.75s ease-in-out;
+  transition-delay: 0.1s;
 }
 
 .weatherAlternate {
-    text-align: center;
+  text-align: center;
 }
-
 .weatherAlternate span.newWeather {
-   background: linear-gradient(to bottom, #000062 0%,#000062 37%,#000045 100%);
-   border-radius: 5px;
-   padding: 2px 5px;
-   cursor: pointer;
+  background: linear-gradient(to bottom, #000062 0%, #000062 37%, #000045 100%);
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
 }
 
 /*Footer*/
-
 #PageFooter {
-    position: fixed;
-    bottom: 0;
-    background-color: #000045;
-    background: linear-gradient(to bottom, #000062 0%,#000062 37%,#000045 100%);      
-    border-top: 1px solid #000045;
-    width: 100%;
-    padding: 5px;
-	z-index: 2;
+  position: fixed;
+  bottom: 0;
+  background-color: #000045;
+  background: linear-gradient(to bottom, #000062 0%, #000062 37%, #000045 100%);
+  border-top: 1px solid #000045;
+  width: 100%;
+  padding: 5px;
+  z-index: 2;
 }
-
 #PageFooter > p {
-    margin: 5px;
+  margin: 5px;
 }
-
 #PageFooter .ExcepHover {
-    /*display: none;*/
-    position: absolute;
-    bottom: 30px;
-    left: 230px;
-    margin-bottom: 20px;
+  /*display: none;*/
+  position: absolute;
+  bottom: 30px;
+  left: 230px;
+  margin-bottom: 20px;
 }
-
-#PageFooter .exceptions {
-    border-bottom: 1px dotted;
-    cursor: pointer;
-}
-
 #PageFooter .ExcepHover div {
-    background-color: #000045;
-    background: linear-gradient(to bottom, #000062 0%,#000062 37%,#000045 100%);
-    padding: 10px;
-    border-radius: 10px;
+  background-color: #000045;
+  background: linear-gradient(to bottom, #000062 0%, #000062 37%, #000045 100%);
+  padding: 10px;
+  border-radius: 10px;
 }
-
 #PageFooter .ExcepHover span {
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-    display: block;
-    border-top: 25px solid #000045;
-    border-left: 50px solid transparent;   
-    border-right: 50px solid transparent;      
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  display: block;
+  border-top: 25px solid #000045;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
 }
-
 #PageFooter .ExcepHover a {
-    color: #9A9AB2;
-    text-decoration: none;
-    transition: all 1s;
+  color: #9A9AB2;
+  text-decoration: none;
+  transition: all 1s;
 }
-
 #PageFooter .ExcepHover a:hover {
-	color: white;
+  color: white;
+}
+#PageFooter .exceptions {
+  border-bottom: 1px dotted;
+  cursor: pointer;
 }
 
 /*Main Content*/
-
 #MainContent {
-    width: auto;
-    margin: 0 10px 40px;
-    padding: 10px;
-    background: rgba(255,255,255,0.4);
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.2) 0%,rgba(255, 255, 255, 0) 70%);
-    box-sizing: border-box;
-    position: relative;
-    z-index: -1;
+  width: auto;
+  margin: 0 10px 40px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  box-sizing: border-box;
+  position: relative;
+  z-index: -1;
+}
+#MainContent .OnTheLeft {
+  font-size: 18px;
+}
+#MainContent .OnTheLeft h2 {
+  text-align: center;
+  font-size: 30px;
+}
+#MainContent .OnTheRight {
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 h1 {
-    text-shadow: 10px 10px 5px rgba(0,0,0,0.25);
-    font-variant: small-caps;
-    font-size: 60px;
-        margin: 0;
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+  font-variant: small-caps;
+  font-size: 60px;
+  margin: 0;
 }
 
 #MainContent h1.MainHeader {
-	display: inline-block;
-    position: relative;
-	line-height: 40px;
-    max-width: 100%;
-    transform: rotateZ(-10deg);
-    -webkit-transform: rotateZ(-10deg);
-    z-index:2;
-       -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: #242446;
+  display: inline-block;
+  position: relative;
+  line-height: 40px;
+  max-width: 100%;
+  transform: rotateZ(-10deg);
+  -webkit-transform: rotateZ(-10deg);
+  z-index: 2;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #242446;
 }
-
-#MainContent .OnTheLeft {
-    font-size:18px;
-}
-
-#MainContent .OnTheLeft h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
-    #MainContent .OnTheRight {
-        margin: 0 auto;
-        max-width: 400px;
-    }
 
 img.frontImg {
-    border: 10px solid #E6E6EF;
-    box-sizing: border-box;
-    background: rgba(255,255,255,0.2);
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-      max-width: 100%;
+  border: 10px solid #E6E6EF;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  max-width: 100%;
 }
 
 @media (min-width: 1150px) {
-    #MainContent h1.MainHeader {
-        top: -10px;
-        left: -30px;
-    }
-
-    #MainContent {
-        width: 1100px!important;
-    }
+  #MainContent {
+    width: 1100px !important;
+  }
+  #MainContent h1.MainHeader {
+    top: -10px;
+    left: -30px;
+  }
 }
-
 @media (min-width: 768px) {
-    h1 {
-        font-size: 80px;
-    }
+  h1 {
+    font-size: 80px;
+  }
 
-    #MainContent {
-        height: 80%;
-        width: 700px;
-        margin: 40px auto;
-    }
-
-    #MainContent h1.MainHeader.dropped {
-        top: -40px;
-        left: -10px;
-    }
-
-    #MainContent h1.MainHeader {
-        top: -1000px;
-        left: 1000px;
-        transition: all 1.5s;
-        -webkit-transition: all 1.5s;
-	    line-height: 80px;
-        -webkit-text-stroke-width: 0;
-    }
-
-    #MainContent .OnTheLeft {
-        width: 60%;
-        display: inline-block;
-        float: left;
-    }
-
-    #MainContent .OnTheRight {
-        width: 40%;
-        display: inline-block;
-        float: right;
-        margin: 0;
-    }
-
+  #MainContent {
+    height: 80%;
+    width: 700px;
+    margin: 40px auto;
+  }
+  #MainContent h1.MainHeader {
+    top: -1000px;
+    left: 1000px;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    line-height: 80px;
+    -webkit-text-stroke-width: 0;
+  }
+  #MainContent h1.MainHeader.dropped {
+    top: -40px;
+    left: -10px;
+  }
+  #MainContent .OnTheLeft {
+    width: 60%;
+    display: inline-block;
+    float: left;
+  }
+  #MainContent .OnTheRight {
+    width: 40%;
+    display: inline-block;
+    float: right;
+    margin: 0;
+  }
 }
+/*# sourceMappingURL=andy.scss.map */
+
+/*# sourceMappingURL=andy.css.map */
