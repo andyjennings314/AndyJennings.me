@@ -1,27 +1,26 @@
-﻿<div ng-controller="weatherCtrl as ctrl">
-    <h1>What's The Weather Like There?</h1>
-    
-    <div class="weatherMain" ng-class="{'day' : ctrl.weatherSpecifics.day, 'night' : !ctrl.weatherSpecifics.day}">
-        <h3>{{ctrl.weatherData.name}}</h3>
-        <div class="weatherIcon">
-            <h1 title="{{ctrl.weatherSpecifics.label}}">{{ctrl.weatherSpecifics.icon}}</h1>
-            <h2>{{ctrl.weatherSpecifics.label}}</h2>
-        </div>
 
-        <div class="weatherElement">
-            <div>
-                <h4 title="Temperature">{{ctrl.weatherSpecifics.temp || 0}}°C</h4>
-            </div>
-            <div>
-                <h4 class="arrow" ng-style="{'transform': 'rotate('+ ctrl.weatherData.wind.deg +'deg)'}" title="Wind direction">⬆</h4>
-            </div>
+<h1>What's The Weather Like There?</h1>
+
+<div class="weatherMain" ng-class="{'day' : $ctrl.weatherSpecifics.day, 'night' : !$ctrl.weatherSpecifics.day}">
+    <h3>{{$ctrl.weatherData.name}}</h3>
+    <div class="weatherIcon">
+        <h1 title="{{$ctrl.weatherSpecifics.label}}">{{$ctrl.weatherSpecifics.icon}}</h1>
+        <h2>{{$ctrl.weatherSpecifics.label}}</h2>
+    </div>
+
+    <div class="weatherElement">
+        <div>
+            <h4 title="Temperature">{{$ctrl.weatherSpecifics.temp || 0}}°C</h4>
+        </div>
+        <div>
+            <h4 class="arrow" ng-style="{'transform': 'rotate('+ $ctrl.weatherData.wind.deg +'deg)'}" title="Wind direction">⬆</h4>
         </div>
     </div>
-    <div class="weatherAlternate">
-        <h3>Want to see the weather somewhere else?</h3>
-        <span class="newWeather" ng-click="ctrl.getWeatherAtPlace('2643743')">London</span>
-        <span class="newWeather" ng-click="ctrl.getWeatherAtPlace('5368361')">LA</span>
-        <span class="newWeather" ng-click="ctrl.getWeatherAtPlace('524901')">Moscow</span>
-        <span class="newWeather" ng-click="ctrl.init()">There Again</span>
-    </div>
+</div>
+<div class="weatherAlternate">
+    <h3>Want to see the weather somewhere else?</h3>
+    <span class="newWeather" ng-click="$ctrl.getWeatherAtPlace('2643743')">London</span>
+    <span class="newWeather" ng-click="$ctrl.getWeatherAtPlace('5368361')">LA</span>
+    <span class="newWeather" ng-click="$ctrl.getWeatherAtPlace('524901')">Moscow</span>
+    <span class="newWeather" ng-click="$ctrl.init()">There Again</span>
 </div>

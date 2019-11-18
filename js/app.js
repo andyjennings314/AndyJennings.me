@@ -19,8 +19,7 @@ app.config(function ($routeProvider) {
             controller: 'pairsCtrl'
         })
         .when('/weather', {
-            templateUrl: 'weather/weather.html',
-            controller: 'weatherCtrl'
+            template: '<weather></weather>'
         })
         .otherwise({
             redirectTo: "/"
