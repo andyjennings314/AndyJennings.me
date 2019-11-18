@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="AJPortfolio">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8" />
@@ -31,27 +31,7 @@
 
     <div id="MainContent" ng-view></div>
 
-    <footer id="PageFooter">
-        <p>&copy; {{copyrightYear}} Andrew Jennings, 
-            <span class="exceptions" ng-click="ExcepHover = !ExcepHover">except where noted</span>
-        </p>
-        <div class="ExcepHover" ng-show="ExcepHover">
-            <div>
-                <p><strong>Libraries used:</strong></p>
-                <ul>
-                    <li><a href="http://www.angularjs.org">AngularJS</a></li>
-                    <li><a href="http://www.jquery.com">jQuery</a></li>
-                    <!--<li><a href="https://github.com/marcandre/detect_swipe">jquery.detectSwipe</a></li>-->
-                </ul>
-                <p><strong>APIs used:</strong></p>
-                <ul>
-                    <li><a href="http://openweathermap.org/">OpenWeatherMap</a></li>
-                    <li><a href="http://freegeoip.net/">freegeoip.net</a></li>
-                </ul>
-            </div>
-            <span></span>
-        </div>
-    </footer>
+    <aj-footer></aj-footer>
 
     <!-- JS libraries -->
     <script src="js/jquery.min.js"></script>
@@ -66,6 +46,8 @@
     <script src="portfolio/portfolioCtrl.js"></script>
     <script src="pairs/pairsCtrl.js"></script>
     <script src="weather/weatherCtrl.js"></script>
+    
+    <script src="footer/footer.js"></script>
 
 </body>
 </html>

@@ -1,23 +1,16 @@
-(function () {
-    var app = angular.module('AJPortfolio');
+angular.module('AJPortfolio').controller('homeCtrl', function ($scope, $rootScope, $timeout) {
+    var self = this;
 
-    var homeCtrl = function ($scope, $rootScope, $timeout) {
-        var self = this;
+    if ($rootScope.isItDropped != true)
+    { $rootScope.isItDropped = false; }
+    else { $rootScope.isItDropped = true; }
 
-        if ($rootScope.isItDropped != true)
-        { $rootScope.isItDropped = false; }
-        else { $rootScope.isItDropped = true; }
+    var dropTheTitle = $timeout(function () {
+        $rootScope.isItDropped = true
+    }, 500);
 
-        var dropTheTitle = $timeout(function () {
-            $rootScope.isItDropped = true
-        }, 500);
+    $scope.$on("$destroy", function (event) {
+        $timeout.cancel(dropTheTitle);
+    });
 
-        $scope.$on("$destroy", function (event) {
-            $timeout.cancel(dropTheTitle);
-        });
-
-    }
-
-    app.controller('homeCtrl', homeCtrl);
-
-}());
+});
