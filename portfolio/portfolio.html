@@ -1,101 +1,102 @@
-﻿    <div>
-         <h1>My Work</h1>
+ <h1>My Work</h1>
 
-        <div id="FolioMain">
+<div id="FolioMain">
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(0, 4, 0)">
-                <a href="http://www.jato.com"><h2>JATO Dynamics</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/jato_0.jpg" />
-                    <img src="images/jato_1.jpg" />
-                    <img src="images/jato_2.jpg" />
-                    <img src="images/jato_3.jpg" />
-                </div>
-                <div class="FolioText">
-                    <p>
-                        I have worked with JATO on their flagship Carspecs platform since December 2013. For the most part, this involved creating, customising, and bugfixing web portals for various
-                    clients, with various combinations of SASS-lead CSS3, AngularJS, and jQuery. I also contributed application logic to the Development version of the site, and helped maintain legacy
-                    versions of Carspecs using c#.</p>
+  <h2>Things I've Made</h2>
 
-                    <p>
-                        Unfortunately, since Carspecs relies on proprietory code, I can't share it with you, so you'll have to enjoy the screenshots of my favourite customised portals.
-                    </p>
-                </div>
-            </div>
+  <div class="FolioPod">
+      <a ng-href="#/pairs"><h2>Pairs Game</h2></a>
+      <div class="FolioImgs">
+          <img src="images/pairs.jpg" />
+      </div>
+      <div class="FolioText">
+          <p>
+              A simple pair matching game I made
+          </p>
+      </div>
+  </div>
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(1, 1, 0)">
-                <a href="http://www.thetoyshop.com"><h2>The Entertainer</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/tent.jpg" />
-                </div>
-                <div class="FolioText">
-                    <p>
-                        Between May 2012 and December 2013, I was the in-house front end developer for The Entertainer's online team. This involved creating custom brand and category pages from
-                        Photoshop wireframes, and circumnavigating the limitations of the CMS with heavy jQuery use. Unfortunately, they have since replatformed their site, so many if not all of the pages I created have been since removed.
-                    </p>
-                </div>
-            </div>
+  <div class="FolioPod">
+      <a ng-href="#/weather"><h2>What's The Weather Like?</h2></a>
+      <div class="FolioImgs">
+          <img src="images/weather.jpg" />
+      </div>
+      <div class="FolioText">
+          <p>
+              As an exercise in parsing data from APIs, I created a weather widget that scrapes your location with one API, then uses that to get the weather from another API.
+          </p>
+      </div>
+  </div>
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(2, 1, 0)">
-                <a href="http://www.andyandtania.com"><h2>Andy And Tania</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/aandt.jpg" />
-                </div>
-                <div class="FolioText"><p>
-                    For my wedding, I built a simple Bootstrap-based site to act as a centralised point for information about the wedding. Afterwards, it was modified to act as a repository
-                    for photos, videos, and articles about the big day.
-                </p></div>
-            </div>
+  <h2>Things I've Done</h2>
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(3, 1, 0)">
-                <a href="/sas"><h2>Sylvain And Saphia</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/sands.jpg" />
-                </div>
-                <div class="FolioText">
-                    <p>
-                        As a wedding gift for friends getting married in June 2016, I offered to build a similar site to Andy And Tania.
-                        The couple required a dual-language site, and initially requested a password-protected site. I therefore implemented a simple AngularJS framework to handle
-                        content navigation and dual language support, as well as adding a new colour scheme to the existing Bootstrap framework.
-                    </p>
-                </div>
-            </div>
+  <div class="FolioPod">
+      <a href="http://www.andyandtania.com"><h2>Andy And Tania</h2></a>
+      <div class="FolioImgs">
+          <img src="images/aandt.jpg" />
+      </div>
+      <div class="FolioText"><p>
+          For my wedding, I built a simple Bootstrap-based site to act as a centralised point for information about the wedding. Afterwards, it was modified to act as a repository
+          for photos, videos, and articles about the big day.
+      </p></div>
+  </div>
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(4, 1, 0)">
-                <a href="/cjm"><h2>CJ Modelling</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/cjm.jpg" />
-                </div>
-                <div class="FolioText">
-                    <p>
-                        My brother requested a simple site with a image portfolio and contact details for his modelling career. I took the opportunity to create a one-page full bleed site, with
-                        a simple responsive layout.
-                    </p>
-                </div>
-            </div>
+  <div class="FolioPod">
+      <a href="/sas"><h2>Sylvain And Saphia</h2></a>
+      <div class="FolioImgs">
+          <img src="images/sands.jpg" />
+      </div>
+      <div class="FolioText">
+          <p>
+              As a wedding gift for friends getting married in June 2016, I offered to build a similar site to Andy And Tania.
+              The couple required a dual-language site, and initially requested a password-protected site. I therefore implemented a simple AngularJS framework to handle
+              content navigation and dual language support, as well as adding a new colour scheme to the existing Bootstrap framework.
+          </p>
+      </div>
+  </div>
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(5, 1, 0)">
-                <a ng-href="#/pairs"><h2>Pairs Game</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/pairs.jpg" />
-                </div>
-                <div class="FolioText">
-                    <p>
-                        A simple pair matching game I made
-                    </p>
-                </div>
-            </div>
+  <div class="FolioPod">
+      <a href="/cjm"><h2>CJ Modelling</h2></a>
+      <div class="FolioImgs">
+          <img src="images/cjm.jpg" />
+      </div>
+      <div class="FolioText">
+          <p>
+              My brother requested a simple site with a image portfolio and contact details for his modelling career. I took the opportunity to create a one-page full bleed site, with
+              a simple responsive layout.
+          </p>
+      </div>
+  </div>
 
-            <div class="FolioPod" ng-init="ctrl.cycleImages(6, 1, 0)">
-                <a ng-href="#/weather"><h2>What's The Weather Like?</h2></a>
-                <div class="FolioImgs">
-                    <img src="images/weather.jpg" />
-                </div>
-                <div class="FolioText">
-                    <p>
-                        As an exercise in parsing data from APIs, I created a weather widget that scrapes your location with one API, then uses that to get the weather from another API.
-                    </p>
-                </div>
-            </div>
+ <h2>Where I've Been</h2>
 
-        </div>
+  <div class="FolioPod">
+      <a href="http://www.jato.com"><h2>JATO Dynamics</h2></a>
+      <div class="FolioImgs">
+          <img src="images/jato_0.jpg" />
+      </div>
+      <div class="FolioText">
+          <p>
+              I have worked with JATO on their flagship Carspecs platform since December 2013. For the most part, this involved creating, customising, and bugfixing web portals for various
+          clients, with various combinations of SASS-lead CSS3, AngularJS, and jQuery. I also contributed application logic to the Development version of the site, and helped maintain legacy
+          versions of Carspecs using c#.</p>
+
+          <p>
+              Unfortunately, since Carspecs relies on proprietory code, I can't share it with you, so you'll have to enjoy the screenshots of my favourite customised portals.
+          </p>
+      </div>
+  </div>
+
+  <div class="FolioPod">
+      <a href="http://www.thetoyshop.com"><h2>The Entertainer</h2></a>
+      <div class="FolioImgs">
+          <img src="images/tent.jpg" />
+      </div>
+      <div class="FolioText">
+          <p>
+              Between May 2012 and December 2013, I was the in-house front end developer for The Entertainer's online team. This involved creating custom brand and category pages from
+              Photoshop wireframes, and circumnavigating the limitations of the CMS with heavy jQuery use. Unfortunately, they have since replatformed their site, so many if not all of the pages I created have been since removed.
+          </p>
+      </div>
+  </div>
+</div>
