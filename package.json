@@ -1,0 +1,26 @@
+{
+  "name": "andyjennings-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio site for Andy Jennings",
+  "main": "index.html",
+  "scripts": {
+    "start": "angular-http-server -o",
+    "sass": "sass css/andy.scss css/andy.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyjennings314/AndyJennings.me.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "Andy Jennings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyjennings314/AndyJennings.me/issues"
+  },
+  "homepage": "https://github.com/andyjennings314/AndyJennings.me#readme",
+  "dependencies": {
+    "angular": "^1.7.8"
+  }
+}
