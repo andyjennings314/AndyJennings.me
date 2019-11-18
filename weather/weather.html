@@ -1,7 +1,11 @@
 
 <h1>What's The Weather Like There?</h1>
 
-<div class="weatherMain" ng-class="{'day' : $ctrl.weatherSpecifics.day, 'night' : !$ctrl.weatherSpecifics.day}">
+<div class="weatherMain" ng-class="{
+  'day' : $ctrl.weatherSpecifics.day && !$ctrl.weatherSpecifics.dusk ,
+  'night' : !$ctrl.weatherSpecifics.day && !$ctrl.weatherSpecifics.dusk,
+  'dusk' : $ctrl.weatherSpecifics.dusk
+}">
     <h3>{{$ctrl.weatherData.name}}</h3>
     <div class="weatherIcon">
         <h1 title="{{$ctrl.weatherSpecifics.label}}">{{$ctrl.weatherSpecifics.icon}}</h1>

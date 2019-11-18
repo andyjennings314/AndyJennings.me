@@ -532,6 +532,11 @@ ul.HeaderMenu li a:hover:before {
     color: white;
 }
 
+.weatherMain.dusk {
+    background: linear-gradient(135deg, rgb(229, 42, 81) 0%,rgba(59,176,222,1) 100%);
+    color: black;
+}
+
 .weatherMain h3{
     margin:0;
 }

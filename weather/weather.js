@@ -71,14 +71,27 @@ angular.module('AJPortfolio').component('weather', {
         if (ctrl.weatherData != null) {
 
             //get the local time, and the sunset/rise times
-            var now = Date.now();
-            var sunTimes = [ctrl.weatherData.sys.sunrise * 1000, ctrl.weatherData.sys.sunset * 1000];
-            if (now < sunTimes[0] || now > sunTimes[1]) {
+            let now = Date.now(),
+              sunTimes = [
+                (ctrl.weatherData.sys.sunrise * 1000) - 3600000,
+                (ctrl.weatherData.sys.sunrise * 1000) + 3600000,
+                (ctrl.weatherData.sys.sunset * 1000) - 3600000,
+                (ctrl.weatherData.sys.sunset * 1000) + 3600000
+              ];
+            
+            
+            if (now < sunTimes[0] || now > sunTimes[3]) {
                 //It's night time
                 ctrl.weatherSpecifics.day = false;
-            } else {
+                ctrl.weatherSpecifics.dusk = false;
+            } else if (now > sunTimes[1] && now < sunTimes[2]) {
                 //It's day time
                 ctrl.weatherSpecifics.day = true;
+                ctrl.weatherSpecifics.dusk = false;
+            } else {
+              //From dusk or dawn
+              ctrl.weatherSpecifics.day = false;
+              ctrl.weatherSpecifics.dusk = true;
             }
 
 
