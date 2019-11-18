@@ -4,7 +4,8 @@
   "description": "Personal portfolio site for Andy Jennings",
   "main": "index.html",
   "scripts": {
-    "start": "angular-http-server -o"
+    "start": "angular-http-server -o",
+    "sass": "sass css/andy.scss css/andy.css"
   },
   "repository": {
     "type": "git",

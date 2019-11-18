@@ -28,10 +28,6 @@ body {
   border-bottom: 1px solid #000045;
 }
 
-.active #PageHeader {
-  margin-bottom: -166px;
-}
-
 a.ToggleMenuButton {
   float: left;
   color: white;
@@ -85,6 +81,9 @@ ul.HeaderMenu li {
   padding: 5px 0;
 }
 
+.active #PageHeader {
+  margin-bottom: -166px;
+}
 .active ul.HeaderMenu {
   opacity: 1;
   transition: transform 1s ease-in;
@@ -99,7 +98,6 @@ ul.HeaderMenu li {
   /* opacity: 1; */
   /* transition: all 1.1s ease-in; */
 }
-
 .active a.ToggleMenuButton span {
   transform: rotate(180deg);
   transition: transform 1s;
@@ -197,12 +195,22 @@ ul.HeaderMenu li a:before {
 }
 
 /* Portfolio Code */
+#FolioMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#FolioMain h2 {
+  width: 100%;
+}
 #FolioMain .FolioPod {
   border-radius: 5px;
   background-color: #BFBFD8;
   padding: 10px;
   margin-bottom: 20px;
   position: relative;
+  box-sizing: border-box;
 }
 #FolioMain .FolioPod h2 {
   margin-top: 0;
@@ -211,7 +219,6 @@ ul.HeaderMenu li a:before {
 }
 #FolioMain .FolioPod img {
   max-width: 100%;
-  opacity: 0;
   transition: opacity 1s;
 }
 #FolioMain .FolioPod img.active {
@@ -225,6 +232,7 @@ ul.HeaderMenu li a:before {
 }
 #FolioMain .FolioPod p {
   text-align: center;
+  cursor: default;
 }
 #FolioMain .FolioPod a {
   color: #000045;
@@ -239,17 +247,9 @@ ul.HeaderMenu li a:before {
     transition: all 0.5s ease-in;
     transform: rotateX(0deg);
   }
-
-  #FolioMain .FolioPod:hover img {
-    transform: rotateX(360deg);
-    opacity: 0.2;
-    transition: all 1s ease-out, opacity 1s;
-  }
-
   #FolioMain .FolioPod p {
     margin: 0;
   }
-
   #FolioMain .FolioPod .FolioText {
     opacity: 0;
     position: absolute;
@@ -259,18 +259,19 @@ ul.HeaderMenu li a:before {
     height: 327px;
     padding: 10px;
   }
-
+  #FolioMain .FolioPod:hover img {
+    transform: rotateX(360deg);
+    opacity: 0.2;
+    transition: all 1s ease-out, opacity 1s;
+  }
   #FolioMain .FolioPod:hover .FolioText {
     opacity: 1;
   }
 }
 @media (min-width: 1150px) {
   #FolioMain .FolioPod {
-    margin: 5px;
-    float: left;
-    width: 510px;
+    width: 49%;
   }
-
   #FolioMain .FolioPod .FolioText {
     width: 490px;
     height: 258px;
