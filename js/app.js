@@ -3,20 +3,16 @@ var app = angular.module('AJPortfolio', ['ngRoute',]);
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: '/home/home.html',
-            controller: 'homeCtrl'
+            template: '<home></home>'
         })
         .when('/portfolio', {
-            templateUrl: '/portfolio/portfolio.html',
-            controller: 'portfolioCtrl'
+            template: '<portfolio></portfolio>'
         })
         .when('/about', {
-            templateUrl: '/about/about.html',
-            controller: 'aboutCtrl'
+            template: '<about></about>',
         })
         .when('/pairs', {
-            templateUrl: '/pairs/pairs.html',
-            controller: 'pairsCtrl'
+            template: '<pairs></pairs>'
         })
         .when('/weather', {
             template: '<weather></weather>'

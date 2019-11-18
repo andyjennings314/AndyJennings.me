@@ -1,4 +1,7 @@
-angular.module('AJPortfolio').controller('portfolioCtrl', function ($timeout) {
+angular.module('AJPortfolio').component('portfolio', {
+  templateUrl: '/portfolio/portfolio.html',
+  bindings: {},
+  controller: function ($timeout) {
     var ctrl = this;
 
     //Switch through images in Folio
@@ -16,5 +19,6 @@ angular.module('AJPortfolio').controller('portfolioCtrl', function ($timeout) {
                     $(".FolioPod:eq(" + podId + ") img").addClass("active");
                 }
             }
+        }
     }
 });    
