@@ -1,7 +1,7 @@
-    <div ng-controller="aboutCtrl as ctrl">
+    <div>
         <h1>About Andy</h1>
-        <span class="SkipSW" ng-show="ctrl.skipSW" ng-click="ctrl.toggleModal = !ctrl.toggleModal">Just show the text in a modal popup already</span>
-		<div class="AboutFrame" ng-class="{'OhAllRight': ctrl.toggleModal}">
+        <span class="SkipSW" ng-show="$ctrl.skipSW" ng-click="$ctrl.toggleModal = !$ctrl.toggleModal">Just show the text in a modal popup already</span>
+		      <div class="AboutFrame" ng-class="{'OhAllRight': $ctrl.toggleModal}">
             <div class="AboutInnerFrame">
                 <p>A long time ago, in a galaxy far, far... no, scratch that.</p>
 

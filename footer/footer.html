@@ -1,0 +1,21 @@
+<footer id="PageFooter">
+    <p>&copy; {{$ctrl.copyrightYear}} Andrew Jennings, 
+        <span class="exceptions" ng-click="$ctrl.ExcepHover = !$ctrl.ExcepHover">except where noted</span>
+    </p>
+    <div class="ExcepHover" ng-show="$ctrl.ExcepHover">
+        <div>
+            <p><strong>Libraries used:</strong></p>
+            <ul>
+                <li><a href="http://www.angularjs.org">AngularJS</a></li>
+                <li><a href="http://www.jquery.com">jQuery</a></li>
+                <!--<li><a href="https://github.com/marcandre/detect_swipe">jquery.detectSwipe</a></li>-->
+            </ul>
+            <p><strong>APIs used:</strong></p>
+            <ul>
+                <li><a href="http://openweathermap.org/">OpenWeatherMap</a></li>
+                <li><a href="http://freegeoip.net/">freegeoip.net</a></li>
+            </ul>
+        </div>
+        <span></span>
+    </div>
+</footer>
