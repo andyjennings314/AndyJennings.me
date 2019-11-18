@@ -1,6 +1,6 @@
 var app = angular.module('AJPortfolio', ['ngRoute',]);
 
-app.config(function ($routeProvider) {
+app.config(function ($locationProvider ,$routeProvider) {
     $routeProvider
         .when('/', {
             template: '<home></home>'
@@ -20,6 +20,8 @@ app.config(function ($routeProvider) {
         .otherwise({
             redirectTo: "/"
         });
+        
+      $locationProvider.hashPrefix('');
 }).run(function ($rootScope) {
     $rootScope.isItDropped = false;
 });
