@@ -4,7 +4,7 @@
   "description": "Personal portfolio site for Andy Jennings",
   "main": "index.html",
   "scripts": {
-    "start": "angular-http-server -o",
+    "start": "angular-http-server -o && tsc -p",
     "sass": "sass css/andy.scss css/andy.css"
   },
   "repository": {
@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/andyjennings314/AndyJennings.me#readme",
   "dependencies": {
+    "@types/angular": "^1.6.56",
     "angular": "^1.7.8"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
   }
 }
