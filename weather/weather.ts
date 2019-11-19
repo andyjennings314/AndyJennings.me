@@ -138,7 +138,7 @@ angular.module('AJPortfolio').component('weather', {
                     }
                     break;
                 case '9':
-                    if (String(weatherCode).charAt(1) == 0) {
+                    if (String(weatherCode).charAt(1) == '0') {
                         //EXTREME WEATHER!!
                         ctrl.weatherSpecifics.icon = "!!!";
                     }
