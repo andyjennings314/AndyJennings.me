@@ -16,18 +16,13 @@ angular.module('AJPortfolio').component('pairs', {
             { type: 4, clicked: false, correct: false },
             { type: 5, clicked: false, correct: false }
         ];
-        ctrl.getCards = function (numberOfCards) {
+        ctrl.getCards = function (numberOfPairs) {
             //get requested number of pairs into holding array
             ctrl.cardSortingHolding = [];
-            while (ctrl.cardSortingHolding.length < (numberOfCards)) {
-                //var nextCard = (ctrl.cardSortingHolding.length / 2);
-                //ctrl.cardSortingHolding.push(ctrl.allCards[nextCard]);
-                //ctrl.cardSortingHolding.push(ctrl.allCards[nextCard]);
-                var nextCardnumber = (ctrl.cardSortingHolding.length / 2);
-                var nextCard = jQuery.extend({}, (ctrl.allCards[nextCardnumber]));
-                ctrl.cardSortingHolding.push(nextCard);
-                nextCard = jQuery.extend({}, (ctrl.allCards[nextCardnumber]));
-                ctrl.cardSortingHolding.push(nextCard);
+            for (var i = 0; i < numberOfPairs; i++) {
+                var nextCard = ctrl.allCards[i];
+                ctrl.cardSortingHolding.push(angular.copy(nextCard));
+                ctrl.cardSortingHolding.push(angular.copy(nextCard));
             }
             //shuffle holding array into selected cards array
             ctrl.selectedCards = [];
@@ -75,7 +70,7 @@ angular.module('AJPortfolio').component('pairs', {
             }
         };
         var init = function () {
-            ctrl.getCards(8);
+            ctrl.getCards(4);
         };
         ctrl.resetGame = function (numberOfCards) {
             //do some reset stuff
