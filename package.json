@@ -4,8 +4,9 @@
   "description": "Personal portfolio site for Andy Jennings",
   "main": "index.html",
   "scripts": {
-    "start": "angular-http-server -o && tsc -w",
-    "sass": "sass css/andy.scss css/andy.css"
+    "start": "concurrently \"npm run watch:sass\" \"npm run watch:ts\" \"angular-http-server -o\"",
+    "watch:sass": "nodemon -e scss -x \"sass css/andy.scss css/andy.css\"",
+    "watch:ts": "nodemon -e ts -x \"tsc\""
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
   "homepage": "https://github.com/andyjennings314/AndyJennings.me#readme",
   "dependencies": {
     "@types/angular": "^1.6.56",
-    "angular": "^1.7.8"
+    "angular": "^1.7.8",
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.0"
   },
   "devDependencies": {
     "typescript": "^3.7.2"
