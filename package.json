@@ -23,7 +23,7 @@
   "homepage": "https://github.com/andyjennings314/AndyJennings.me#readme",
   "dependencies": {
     "@types/angular": "^1.6.56",
-    "angular": "^1.7.8",
+    "angular": "^1.7.9",
     "concurrently": "^5.0.0",
     "nodemon": "^2.0.0"
   },
