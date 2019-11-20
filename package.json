@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/andyjennings314/AndyJennings.me#readme",
   "dependencies": {
-    "angular": "^1.7.8"
+    "angular": "^1.7.9"
   }
 }
