@@ -1,4 +1,4 @@
-var app = angular.module('AJPortfolio', ['ngRoute',]);
+let app = angular.module('AJPortfolio', ['ngRoute',]);
 
 app.config(function ($locationProvider ,$routeProvider) {
     $routeProvider

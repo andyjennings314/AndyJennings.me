@@ -7,12 +7,8 @@ angular.module('AJPortfolio').component('about', {
     ctrl.skipSW = false;
     ctrl.toggleModal = false;
 
-    var skipSWTimer = $timeout(function () {
+    $timeout(function () {
         ctrl.skipSW = true;
     }, 9000);
-
-    $scope.$on("$destroy", function (event) {
-        $timeout.cancel(skipSWTimer);
-    });
   }
 });

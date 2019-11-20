@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "outFile": "./js/compiled.js"
+  },
+  "include": [
+    "js/app.ts",
+    "**/*",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
